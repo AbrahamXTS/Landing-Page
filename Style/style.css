@@ -1,0 +1,250 @@
+:root {
+  /* Variables en CSS */
+
+  --base: #ffffff;
+  --fondo: #dfe9f3;
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --terciario: #757575;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to top, var(--fondo) 0%, var(--base) 100%);
+}
+
+/* Utilidades */
+.contenedor {
+  max-width: 120rem;
+  margin: 0rem auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+/* Navegación */
+.navegacion {
+  background-color: var(--secundario);
+}
+
+.navegacion-principal {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .navegacion-principal {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.navegacion-principal a {
+  color: var(--base);
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+}
+
+/* Header */
+.branding {
+  background-image: url(../Images/branding.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45rem;
+  display: flex;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.contenido-branding {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-branding h2,
+.contenido-branding p {
+  color: var(--base);
+}
+
+.ubicacion {
+  display: flex;
+  align-items: center;
+}
+
+.boton {
+  color: var(--base);
+  margin: 3.5rem 2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .boton {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+.boton-azul {
+  background-color: var(--secundario);
+}
+
+/* Mis servicios */
+.degradado {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  background-color: var(--base);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+main {
+  padding-top: 2rem;
+}
+
+.servicios {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%; /* Tamaño de las columnas. Podemos reemplazar los porcentajes por fracciones con la sintaxis 1fr 1fr 1fr. Cuando usamos la misma propiedad varias veces utilizamos la función repeat(número-de-veces-que-se-repite-la-propiedad, propiedad)*/
+  column-gap: 1rem; /* Agrega separación entre columnas. */
+}
+
+@media (max-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: none;
+  }
+}
+
+.servicios-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicios-contenido h3 {
+  color: var(--secundario);
+}
+
+.servicios-contenido p {
+  text-align: center;
+  line-height: 2;
+}
+
+.contenedor-icono {
+  background-color: var(--primario);
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Contacto */
+.contacto {
+  margin-bottom: 2rem;
+}
+
+.formulario {
+  background-color: var(--terciario);
+  width: min(
+    60rem,
+    100%
+  ); /* Utiliza el tamaño que sea más pequeño entre ambos casos.  */
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  color: var(--primario);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.elemento-formulario {
+  margin-bottom: 1rem;
+}
+
+.elemento-formulario label {
+  color: var(--base);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.entrada-formulario {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+textarea.entrada-formulario {
+  resize: none;
+  min-height: 10rem;
+}
+
+.boton-enviar {
+  background-color: var(--secundario);
+  border: none;
+  margin: 2rem 0rem;
+}
+
+@media (max-width: 768px) {
+  .boton-enviar {
+    width: 100%;
+  }
+}
+
+footer p {
+  text-align: center;
+  margin: 3rem;
+}
